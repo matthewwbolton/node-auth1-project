@@ -12,13 +12,13 @@ function App() {
       <Route path="/register">
         <UserRegistration />
       </Route>
-      <Route>
+      <Route exact path="/">
         <LoginForm />
       </Route>
       <Route exact path="/users">
         <Users />
       </Route>
-      <Route>
+      <Route exact path="/logout">
         <LogoutPage />
       </Route>
     </div>

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axiosWithAuth from "../../axiosWithAuth/axiosWithAuth";
 
 const Users = () => {
   const [users, setUsers] = useState();
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/users")
+    axiosWithAuth
+      .get("/api/users")
       .then((res) => {
         console.log(res);
       })

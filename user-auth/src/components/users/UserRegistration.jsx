@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import Axios from "axios";
+import axiosWithAuth from "../../axiosWithAuth/axiosWithAuth";
 
 const UserRegistration = () => {
   const [newUser, setNewUser] = useState({
@@ -16,7 +16,8 @@ const UserRegistration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:5000/api/auth/register", newUser)
+    axiosWithAuth
+      .post("http://localhost:5000/api/auth/register", newUser)
       .then((res) => {
         console.log("POST RESPONSE FROM USER REGISTRATION", res);
         push("/users");
