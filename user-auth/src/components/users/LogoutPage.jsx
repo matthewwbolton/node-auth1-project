@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import axiosWithAuth from "../../axiosWithAuth/axiosWithAuth";
+import Axios from "axios";
 
 const LogoutPage = () => {
   useEffect(() => {
-    axiosWithAuth
-      .get("/api/auth/logout")
+    Axios.get("/api/auth/logout")
       .then((res) => {
         console.log(res);
       })

@@ -20,7 +20,7 @@ const UserRegistration = () => {
       .post("http://localhost:5000/api/auth/register", newUser)
       .then((res) => {
         console.log("POST RESPONSE FROM USER REGISTRATION", res);
-        push("/users");
+        // push("/users");
       })
       .catch((err) => console.log(err.message));
 

@@ -17,8 +17,7 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axiosWithAuth
-      .post("/api/auth/login", user)
+    Axios.post("http://localhost:5000/api/auth/login", user)
       .then((res) => {
         console.log("THIS IS RES FROM .POST LOGIN FORM", res);
         push("/users");
