@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link } from "react-router-dom";
+import { Route, NavLink } from "react-router-dom";
 import LoginForm from "../src/components/users/LoginForm";
 import Users from "../src/components/users/Users";
 import LogoutPage from "../src/components/users/LogoutPage";
@@ -9,6 +9,12 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <nav>
+        <NavLink to="/">Login</NavLink>
+        <NavLink to="/register">Register Here</NavLink>
+        <NavLink to="/users">Users</NavLink>
+        <NavLink to="/logout">Logout</NavLink>
+      </nav>
       <Route path="/register">
         <UserRegistration />
       </Route>

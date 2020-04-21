@@ -23,8 +23,8 @@ const sessionConfig = {
   },
 };
 
-let corsOptions = {
-  orgin: ["http://localhost:3000", "http://localhost:5000"],
+var corsOptions = {
+  origin: ["http://localhost:3000", "http://localhost:5000"],
   credentials: true,
 };
 

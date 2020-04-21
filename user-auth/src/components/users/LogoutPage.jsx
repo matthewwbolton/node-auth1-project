@@ -4,7 +4,8 @@ import Axios from "axios";
 
 const LogoutPage = () => {
   useEffect(() => {
-    Axios.get("/api/auth/logout")
+    axiosWithAuth
+      .get("/api/auth/logout")
       .then((res) => {
         console.log(res);
       })
